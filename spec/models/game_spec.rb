@@ -4,7 +4,6 @@ RSpec.describe Game, type: :model do
   describe "populate board all players" do
     it "determines if the populated board is complete" do
       game = FactoryBot.create(:game)
-      game.populate_board!
       expect(game.chess_pieces.count).to eq(32)
     end
  end
@@ -12,7 +11,7 @@ RSpec.describe Game, type: :model do
   describe "populate board with the white players" do
     it "Places all of the white player pieces onto the board's start-game positions" do
       game = FactoryBot.create(:game)
-      game.populate_board!
+      
 
       # white Pawns
       expect(game.chess_pieces.find_by(position_x: 0, position_y: 1).type).to eq 'Pawn'
@@ -65,11 +64,11 @@ RSpec.describe Game, type: :model do
       expect(game.chess_pieces.find_by(position_x: 4, position_y: 0).color).to eq 'white'
     end
   end
-  
+
   describe "populate board with the black players" do
     it "Places all of the black player pieces onto the board's start-game positions" do
       game = FactoryBot.create(:game)
-      game.populate_board!
+      
 
       # black Pawns
       expect(game.chess_pieces.find_by(position_x: 0, position_y: 6).type).to eq 'Pawn'

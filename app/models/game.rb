@@ -1,7 +1,8 @@
 class Game < ApplicationRecord
   has_many :chess_pieces
 
-  
+    after_create :populate_board!
+
     def populate_board!
      # white pieces
      (0..7).each do |w|

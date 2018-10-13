@@ -9,9 +9,7 @@ class GamesController < ApplicationController
   end
 
   def create 
-    @game = Game.create
-    @game.populate_board!
-    redirect_to game_path(@game)
+    @game = Game.create  
   end
 
   def show
