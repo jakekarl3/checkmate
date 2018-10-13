@@ -3,13 +3,11 @@ FactoryBot.define do
     
   end
   factory :player do
-    
   end
-  factory :chess_piece do
-    positon_x
-    positon_y 
-    
+
+  factory :chess_piece do 
   end
+
   factory :user do
     sequence :email do |n|
       "dummyEmail#{n}@gmail.com"
