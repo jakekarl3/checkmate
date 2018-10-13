@@ -6,6 +6,8 @@ FactoryBot.define do
     
   end
   factory :chess_piece do
+    positon_x
+    positon_y 
     
   end
   factory :user do
