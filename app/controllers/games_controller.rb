@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.first  
+    @games = Game.all 
   end
 
   def new
